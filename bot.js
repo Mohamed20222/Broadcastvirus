@@ -47,8 +47,8 @@ client.on("message", async message => {
 
 
                                             .setTitle("Broadcast")
-                                            .addField("Server", message.guild.name)
-                                            .addField("Sender", message.author.username)
+
+
                                             .addField("Message", args);
 
                                             member.sendEmbed(bc);
