@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
   const bot = new Discord.Client();
-    const BOT_TOKEN= "MzI3NzM2NTMyOTMwOTIwNDUw.DGmnLA.QFbtYXPzTAvZsoFW70wNLyVm3lE"
+
       Bot.on('ready', () => {
         Bot.user.setGame(`Virus Broadcast`,'https://www.twitch.tv/TEST-Broadcast');
           console.log('Im Ready!');
