@@ -41,10 +41,10 @@ client.on("message", async message => {
 
                             yes.on("collect", v => {
                                 m.delete();
-                                    message.channel.send(`:ballot_box_with_check: | Done ... The Broadcast Message Has Been Sent For ${message.guild.memberCount} Members`).then(msg => msg.delete(5000));
+                                    message.channel.send(` | Done ... The Broadcast Message Has Been Sent For ${message.guild.memberCount} Members`).then(msg => msg.delete(5000));
                                         message.guild.members.forEach(member => {
                                             let bc = new Discord.RichEmbed()
-                                            .setColor("RANDOM")
+                                            .setColor("RED")
                                             .setThumbnail(message.author.avatarURL)
                                             .setTitle("Broadcast")
                                             .addField("Server", message.guild.name)
@@ -80,10 +80,10 @@ client.on("message", async message => {
 
                             yes.on("collect", v => {
                                 m.delete();
-                                    message.channel.send(`:ballot_box_with_check: | Done ... The Broadcast Message Has Been Sent For ${message.guild.members.filter(r => r.presence.status !== "offline").size} Members`).then(msg => msg.delete(5000));
+                                    message.channel.send(` | Done ... The Broadcast Message Has Been Sent For ${message.guild.members.filter(r => r.presence.status !== "offline").size} Members`).then(msg => msg.delete(5000));
                                         message.guild.members.filter(r => r.presence.status !== "offline").forEach(member => {
                                             let bco = new Discord.RichEmbed()
-                                            .setColor("RANDOM")
+                                            .setColor("BLACK")
                                             .setThumbnail(message.author.avatarURL)
                                             .setTitle("Broadcast")
                                             .addField("Server", message.guild.name)
@@ -113,7 +113,7 @@ client.on("message", async message => {
 
                 let server = new Discord.RichEmbed()
                     .setAuthor(message.guild.name)
-                    .setColor("RANDOM")
+                    .setColor("PURPLE")
                     .setTitle("Server Info :hearts: :sparkles:")
                     .setDescription(`Members :bust_in_silhouette: : ${message.guild.memberCount}\nOwner :crown: : ${message.guild.owner.user.username}\nServer ID :id: : ${message.guild.id}\nRoles :lock: : ${message.guild.roles.size}\nRegion :earth_africa: : ${message.guild.region.toUpperCase()}`);
 
@@ -135,11 +135,11 @@ client.on("message", async message => {
 client.on("message", async message => {
     if(message.content.startsWith(prefix + "invite")) {
         let invite = new Discord.RichEmbed()
-            .setColor("RANDOM")
+            .setColor("ORANGE")
             .setAuthor(message.author.username, message.author.displayAvatarURL)
             .setThumbnail(message.author.avatarURL)
-            .setTitle("**Click Here To Invite The Bot To Your Server :sparkling_heart:**")
-            .setURL(`https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=8`);
+            .setTitle("**ليس كتوفر هذا بوت خاص**")
+            .setURL(`ليس متوفر`);
             message.channel.sendEmbed(invite);
     }
 });
@@ -151,13 +151,13 @@ client.on("message", async message => {
             .setDescription(`**__برودكاست بوت | Version 1.1__ 
 
             برودكاست عادي : ${prefix}bc
-            دعوة البوت لسيرفرك : ${prefix}invite
+
             معلومات عن السيرفر : ${prefix}server
             برودكاست للأونلاين فقط : ${prefix}bco
             يعرض لك عدد المتبندين من سيرفرك : ${prefix}banned
-            رابط سيرفر الدعم الفني : https://discord.gg/YEXcDXt 
+            رابط سيرفر الدعم الفني : soon 
             **`);
-            message.channel.sendEmbed(help); // رابط السيرفر يعود الى سيرفر CODES .
+
     }
 });
 
