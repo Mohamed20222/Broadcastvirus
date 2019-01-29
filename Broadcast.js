@@ -1,14 +1,14 @@
 const Discord = require("discord.js");
-  const kboosh = new Discord.Client();
-    const kbooshtoken = "MzI3NzM2NTMyOTMwOTIwNDUw.DGmnLA.QFbtYXPzTAvZsoFW70wNLyVm3lE"
-      kboosh.on('ready', () => {
-        kboosh.user.setGame(`KBOOSH TEST Broadcast`,'https://www.twitch.tv/TEST-Broadcast');
+  const bot = new Discord.Client();
+    const BOT_TOKEN= "MzI3NzM2NTMyOTMwOTIwNDUw.DGmnLA.QFbtYXPzTAvZsoFW70wNLyVm3lE"
+      Bot.on('ready', () => {
+        Bot.user.setGame(`Virus Broadcast`,'https://www.twitch.tv/TEST-Broadcast');
           console.log('Im Ready!');
   
         });
 
-  kboosh.on('message', message => {
-    if (message.content.split(' ')[0] == '%k')
+  Bot.on('message', message => {
+    if (message.content.split(' ')[0] == '$k')
        message.guild.members.forEach( member => {
          if (!message.member.hasPermission("ADMINISTRATOR"))  return;
 
@@ -19,8 +19,8 @@ const Discord = require("discord.js");
                                                     });
             
                                                   });
-   kboosh.on("message", message => {
-       var prefix = "%";
+   Bot.on("message", message => {
+       var prefix = "$";
  
              var args = message.content.substring(prefix.length).split(" ");
                 if (message.content.startsWith(prefix + "b")) {
@@ -45,4 +45,4 @@ const Discord = require("discord.js");
                             }
                           }
 });
-kboosh.login(kbooshtoken);
+Bot.login(BOT_TOKE);
