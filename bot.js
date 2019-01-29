@@ -83,7 +83,7 @@ client.on("message", async message => {
                                     message.channel.send(` | Done ... The Broadcast Message Has Been Sent For ${message.guild.members.filter(r => r.presence.status !== "offline").size} Members`).then(msg => msg.delete(5000));
                                         message.guild.members.filter(r => r.presence.status !== "offline").forEach(member => {
                                             let bco = new Discord.RichEmbed()
-                                            .setColor("BLACK")
+
                                             .setThumbnail(message.author.avatarURL)
                                             .setTitle("Broadcast")
                                             .addField("Server", message.guild.name)
@@ -113,7 +113,7 @@ client.on("message", async message => {
 
                 let server = new Discord.RichEmbed()
                     .setAuthor(message.guild.name)
-                    .setColor("PURPLE")
+
                     .setTitle("Server Info :hearts: :sparkles:")
                     .setDescription(`Members :bust_in_silhouette: : ${message.guild.memberCount}\nOwner :crown: : ${message.guild.owner.user.username}\nServer ID :id: : ${message.guild.id}\nRoles :lock: : ${message.guild.roles.size}\nRegion :earth_africa: : ${message.guild.region.toUpperCase()}`);
 
@@ -135,10 +135,10 @@ client.on("message", async message => {
 client.on("message", async message => {
     if(message.content.startsWith(prefix + "invite")) {
         let invite = new Discord.RichEmbed()
-            .setColor("ORANGE")
+
             .setAuthor(message.author.username, message.author.displayAvatarURL)
             .setThumbnail(message.author.avatarURL)
-            .setTitle("**ليس كتوفر هذا بوت خاص**")
+            .setTitle("**ليس متوفر هذا بوت خاص**")
             .setURL(`ليس متوفر`);
             message.channel.sendEmbed(invite);
     }
@@ -146,7 +146,7 @@ client.on("message", async message => {
 client.on("message", async message => {
     if(message.content.startsWith(prefix + "help")) {
         let help = new Discord.RichEmbed()
-            .setColor("RANDOM")
+
             .setThumbnail(message.author.avatarURL)
             .setDescription(`**__برودكاست بوت | Version 1.1__ 
 
