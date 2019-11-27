@@ -2,13 +2,13 @@ const Discord = require("discord.js");
   const bot = new Discord.Client();
 
       Bot.on('ready', () => {
-        Bot.user.setGame(`Virus Broadcast`,'https://www.twitch.tv/TEST-Broadcast');
+        Bot.user.setGame(`Condor Broadcast`,'https://www.twitch.tv/Medo-Broadcast');
           console.log('Im Ready!');
   
         });
 
   Bot.on('message', message => {
-    if (message.content.split(' ')[0] == '$k')
+    if (message.content.split(' ')[0] == '!b')
        message.guild.members.forEach( member => {
          if (!message.member.hasPermission("ADMINISTRATOR"))  return;
 
@@ -20,7 +20,7 @@ const Discord = require("discord.js");
             
                                                   });
    Bot.on("message", message => {
-       var prefix = "$";
+       var prefix = "!";
  
              var args = message.content.substring(prefix.length).split(" ");
                 if (message.content.startsWith(prefix + "b")) {
@@ -29,7 +29,7 @@ const Discord = require("discord.js");
                           if (!args[1]) {
                             
                                  let embed3 = new Discord.RichEmbed()
-                                     .setDescription(":white_check_mark: | تم ارسال رسالة لا يوجد فيها شيء")
+                                     .setDescription(":white_check_mark: | تم ارسال رسالة")
                                        .setColor("#FF00FF")
                                           message.channel.sendEmbed(embed3);
                             
@@ -45,4 +45,4 @@ const Discord = require("discord.js");
                             }
                           }
 });
-Bot.login(BOT_TOKE);
+Bot.login(BOT_TOKEN);
